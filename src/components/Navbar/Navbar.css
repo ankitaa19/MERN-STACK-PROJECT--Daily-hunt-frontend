@@ -1,0 +1,230 @@
+/* Navbar Container */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #7699b1, #094d59); /* Vibrant Gradient */
+  color: #FFFFFF; /* White Text */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background 0.3s ease;
+}
+
+/* Logo Section */
+nav img {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+nav img:hover {
+  transform: rotate(360deg); /* Fancy rotation hover effect */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-menu button {
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px); /* Slight upward hover effect */
+}
+
+/* Search Bar */
+.nav-menu div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-menu input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1); /* Subtle Transparent Background */
+  color: #FFFFFF;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Softer placeholder */
+}
+
+.nav-menu input:focus {
+  background: #FFFFFF;
+  color: #2E2E2E;
+  transform: scale(1.1); /* Slight zoom-in effect */
+  border-color: #e6cc7d; /* Gold Accent */
+}
+
+.nav-menu button:last-child {
+  padding: 10px 20px;
+  background: #FFC107; /* Gold */
+  color: #2E2E2E;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-menu button:last-child:hover {
+  background: #FFB300;
+}
+
+/* Right Section */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #FFC107; /* Gold */
+  color: #2E2E2E;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nav-actions button:hover {
+  background: #FFB300; /* Slightly darker Gold */
+  transform: scale(1.1); /* Pop-out effect */
+}
+
+.nav-actions img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark Overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #12D8FA, #1FA2FF); /* Premium Gradient */
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Input Fields in Modals */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent Input */
+  color: #FFFFFF;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-content input:focus {
+  background: #FFFFFF;
+  color: #2E2E2E;
+  transform: scale(1.05); /* Subtle zoom */
+  border-color: #FFC107;
+}
+
+/* Submit Buttons in Modals */
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #FFC107;
+  color: #2E2E2E;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #FFB300; /* Darker Gold */
+  transform: scale(1.1);
+}
+
+/* Body Padding */
+body {
+  padding-top: 80px;
+  font-family: 'Roboto', sans-serif;
+  background: #F4F4F4; /* Light Neutral Background */
+  color: #2E2E2E;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu input {
+    width: 100%;
+  }
+}
